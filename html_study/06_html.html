@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>테이블 셀 병합</title>
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                padding: 8px;
+                text-align: center;
+            }
+            th {
+                background-color: #00b7ff;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>공부합시다</h1>
+        <table>
+            <caption>
+                2025년 상반기 판매 요약
+            </caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">카테고리</th>
+                    <th colspan="2">상반기</th>
+                </tr>
+                <tr>
+                    <th>1분기</th>
+                    <th>2분기</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>의류</td>
+                    <td>100</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>식품</td>
+                    <td>180</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>가전</td>
+                    <td>110</td>
+                    <td>210</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>총계</td>
+                    <td colspan="2">1000</td>
+                </tr>
+            </tfoot>
+        </table>
+        <hr />
+        <table>
+            <caption>
+                학생별 과목 점수
+            </caption>
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th colspan="2">과목</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">김철수</td>
+                    <td>국어</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>수학</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">김영희</td>
+                    <td>국어</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>수학</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <h1>colspan과 rowspan 함께 사용 하기</h1>
+        <table>
+            <caption>
+                복합적인 표 구조 예시
+            </caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">구분</th>
+                    <th colspan="2">성적</th>
+                </tr>
+                <tr>
+                    <th>중간고사</th>
+                    <th>기말고사</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>국어</td>
+                    <td>80</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>수학</td>
+                    <td>80</td>
+                    <td>85</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <table>
+            <caption>
+                1반 / 2반 주간 시간표 및 출석 요약
+            </caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">요일</th>
+                    <th colspan="3">1반</th>
+                    <th colspan="3">2반</th>
+                    <th rowspan="2">비고</th>
+                </tr>
+                <tr>
+                    <th>1교시</th>
+                    <th>2교시</th>
+                    <th>3교시</th>
+                    <th>1교시</th>
+                    <th>2교시</th>
+                    <th>3교시</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>월</th>
+                    <td>HTML 기초</td>
+                    <td colspan="2">프로젝트 실습(레이아웃)</td>
+                    <td>Git 특강</td>
+                    <td>자습</td>
+                    <td>자습</td>
+                    <td rowspan="2">공통: HTML/CSS 리뷰</td>
+                </tr>
+                <tr>
+                    <th>화</th>
+                    <td>CSS 선택자</td>
+                    <td>CSS 박스 모델</td>
+                    <td>반응형 기초</td>
+                    <td colspan="2">자바스크립트 기초</td>
+                    <td>코딩테스트 연습</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">수</th>
+                    <td>폼태그</td>
+                    <td rowspan="2">프로젝트 회의</td>
+                    <td>테이블 태그</td>
+                    <td>배열 다루기</td>
+                    <td rowspan="2">팀회의 </td>
+                    <td>함수 기초</td>
+                    <td rowspan="2">프로젝트 중간 점검</td>
+                </tr>
+                <tr>
+                    <td>시맨틱 태그</td>
+                    <td>웹 접근성</td>
+                    <td>객체 기초</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>목</th>
+                    <td colspan="3">프로젝트 구현(전체)</td>
+                    <td>DOM 조작</td>
+                    <td>이벤트 처리</td>
+                    <td>비동기 통신</td>
+                    <td>코드 리뷰</td>
+                </tr>
+                <tr>
+                    <th>금</th>
+                    <td>퀴즈</td>
+                    <td>진도보충</td>
+                    <td>자습</td>
+                    <td>퀴즈</td>
+                    <td>진도보충</td>
+                    <td>자습</td>
+                    <td>주간 회고</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">1반 주간 평균 출석율 : 95%</td>
+                    <td colspan="4">2반 주간 평균 출석율 : 92%</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

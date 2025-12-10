@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>css 자식 선택자</title>
+        <style>
+            #container {
+                border: 1px solid black;
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            #container > p > span {
+                font-size: 18px;
+                color: orange;
+                font-weight: 850;
+            }
+
+            #container > p:nth-child(2) {
+                border: 5px solid blue;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            #container > p:nth-child(3),
+            p:nth-child(4) {
+                color: blueviolet;
+                text-decoration: underline;
+                text-align: end;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3>자식 선택자</h3>
+        <div id="container">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+                <span>quas vero alias dolore impedit dignissimos at non,</span>
+                voluptas laborum blanditiis vel a aliquid eligendi, soluta,
+                maiores autem architecto fugiat quae!
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
+                iste quae illum ad libero iusto sed, modi molestias dolorem
+                fugiat magnam nam natus. Voluptatum in veniam consequuntur, vero
+                perspiciatis quibusdam?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde et
+                error iste in consequuntur culpa nisi sit necessitatibus
+                adipisci harum magnam sunt aperiam enim consectetur sapiente
+                suscipit incidunt, quo mollitia?
+                <p>p안의 p</p>
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laudantium iusto eos, excepturi qui at quibusdam natus obcaecati
+                nam doloremque ducimus voluptates? Soluta maiores quia iure
+                officia necessitatibus architecto asperiores dolore.
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>input 태그</title>
+    </head>
+    <body>
+        <h1>Input 태그</h1>
+        <form action="#" method="post">
+            <h2>회원가입</h2>
+            <div>
+                <label for="username">아이디 : </label>
+                <!-- laber for - input id 연결 -->
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="아이디를 입력하세요." />
+                <!-- type : text(일반 텍스트 입력) / password(입력 내용 가려짐) / number(숫자만) -->
+                <!-- name : db의 키 역할 -->
+            </div>
+            <div>
+                <label for="password_input_id">비밀번호 : </label>
+                <input
+                    type="password"
+                    name="password"
+                    id="password_input_id"
+                    placeholder="비밀번호를 입력하세요." />
+            </div>
+            <div>
+                <label for="email_input_id">이메일 : </label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email_input_id"
+                    placeholder="이메일을 입력하세요." />
+            </div>
+            <div>
+                <label for="tel_input_id">전화번호 : </label>
+                <input
+                    type="tel"
+                    name="email"
+                    id="tel_input_id"
+                    placeholder="전화번호를 입력 하세요." />
+            </div>
+            <div>
+                <label for="age_input_id">나이 : </label>
+                <input
+                    type="number"
+                    name="age"
+                    id="age_input_id"
+                    min="1"
+                    max="120"
+                    value="25"
+                    placeholder="나이를 입력 하세요." />
+            </div>
+            <br />
+            <div>
+                <button type="submit">회원 가입</button>
+                <button type="reset">초기화</button><!-- form tag 내에서만 의미 있음 -->
+            </div>
+            <br />
+            <div>
+                <label for="date_input_id">날자 선택 : </label>
+                <input type="date" name="date" id="date_input_id" />
+            </div>
+            <br />
+            <div>
+                <label for="color_input_id">색깔 선택 : </label>
+                <input type="color" name="color" id="color_input_id" />
+            </div>
+            <br />
+            <div>
+                <label for="range_input_id">범위 선택 : </label>
+                <input type="range" name="range" id="range_input_id" min="1" max="120" value="60" />
+            </div>
+            <br />
+            <div>
+                <label for="file_input_id">파일 선택 : </label>
+                <input type="file" name="file" id="file_input_id" accept=".jpg" />
+            </div>
+            <br />
+            <div>
+                <label for="file_input_id">파일 선택 : </label>
+                <input type="file" name="file" id="file_input_id" multiple />
+            </div>
+            <br />
+            <div>
+                <label for="hidden_input_id">숨겨진 데이터 : </label>
+                <input type="hidden" name="hidden" id="hidden_input_id" value="12345" />
+            </div>
+            <br />
+            <div>
+                <input type="radio" name="fruits" id="apple" />
+                <label for="apple">사과</label>
+                <input type="radio" name="fruits" id="mango" />
+                <label for="mango">망고</label>
+                <input type="radio" name="fruits" id="strawberry" />
+                <label for="strawberry">딸기</label>
+                <input type="radio" name="fruits" id="grape" />
+                <label for="grape">포도</label>
+            </div>
+            <br /><br /><br />
+            <div>
+                <label for="check_input_id">위 약관에 동의하시겠습니까?</label>
+                <input type="checkbox" id="check_input_id" />
+            </div>
+        </form>
+    </body>
+</html>

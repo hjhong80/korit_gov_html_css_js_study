@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>css 방식</title>
+        <!-- 내부 스타일 시트 - head 태그 안쪽에 style 태그를 사용하여 양식 지정 -->
+        <!-- p 태그의 스타일 변경 -->
+        <!-- 적용될 내용에 가까운 style이 우선 적용 된다. -->
+        <link rel="stylesheet" href="01_css.css">
+        <style>
+            p {
+                font-size: 20px;
+                color: brown;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Cascading Style Sheet</h1>
+        <p><ul><li>outer style sheet</li></ul></p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore tempore aperiam minima corporis ipsum! Molestiae deserunt ab quisquam explicabo assumenda doloremque dolores cupiditate nam similique magni dignissimos, provident ducimus placeat.</p>
+
+        <p><ul><li>inline style</li></ul></p>
+        <p style="
+            color: blue;
+            font-weight : 1000;
+            border : 5px solid red;
+            border-radius: 50px;
+            padding : 15px
+        ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium aut aliquid facilis, numquam voluptas doloribus quos excepturi iure, beatae illo veniam libero neque similique aliquam reprehenderit modi, mollitia ullam quibusdam?</p>
+        
+        <p><ul><li>inner style sheet</li></ul></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iste numquam ad voluptatum illum magnam quod aperiam assumenda. Omnis debitis temporibus, aspernatur quas voluptatum quo ipsum! Tenetur libero explicabo recusandae.</p>
+    </body>
+</html>
