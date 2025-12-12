@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,85 +6,100 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <style>
-            #contaner {
-                background-color: orange;
+            #container {
                 width: 1000px;
                 height: 500px;
-                display: flex;
-                justify-content: space-around;
+                background-color: aquamarine;
             }
 
-            .fbox {
+            #header_container {
                 width: 1000px;
                 height: 150px;
-                background-color: burlywood;
-                display: column;
-                justify-content: space-around;
-                align-items: ;
-            }
-
-            .fbox2 {
-                width: 1000px;
-                height: 350px;
-                background-color: red;
-                display: column;
+                background-color: violet;
+                display: flex;
                 justify-content: space-around;
                 align-items: center;
             }
 
-            .ybox {
+            #header_container > div {
                 width: 430px;
                 height: 110px;
-                background-color: red;
+                background-color: brown;
+                padding: 15px;
+                box-sizing: border-box;
             }
 
-            .box {
-                width: 50px;
-                height: 50px;
-                background-color: transparent;
+            #header_container > div > h3,
+            p {
+                margin: 0;
+            }
+
+            #main_container {
+                width: 1000px;
+                height: 350px;
+                background-color: tomato;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .card {
+                width: 430px;
+                height: 140px;
+                background-color: darkcyan;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .img_box {
+                width: 100px;
+                height: 100px;
+                background-color: darkolivegreen;
+            }
+
+            .text_box {
+                width: 280px;
+                height: 100px;
+                background-color: darksalmon;
             }
         </style>
     </head>
     <body>
-        <div id="contaner">
-            <div class="fbox">
+        <div id="container">
+            <div id="header_container">
                 <div>
-                    <div class="ybox"></div>
-                    <div class="ybox"></div>
-                </div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="fbox">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="fbox">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="fbox">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="fbox">
-                <div>
-                    <div class="ybox"></div>
-                    <div class="box"></div>
-                    <div class="ybox"></div>
+                    <h3>제목1</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dignissimos reiciendis amet, ut tenetur eveniet
+                    </p>
                 </div>
                 <div>
-                    <div class="box"></div>
-                    <div class="ybox"></div>
-                    <div class="box"></div>
+                    <h3>제목2</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dignissimos reiciendis amet, ut tenetur eveniet
+                    </p>
                 </div>
-                <div>
-                    <div class="ybox"></div>
-                    <div class="box"></div>
-                    <div class="ybox"></div>
+            </div>
+            <div id="main_container">
+                <div class="card">
+                    <div class="img_box"></div>
+                    <div class="text_box"></div>
+                </div>
+                <div class="card">
+                    <div class="img_box"></div>
+                    <div class="text_box"></div>
+                </div>
+                <div class="card">
+                    <div class="img_box"></div>
+                    <div class="text_box"></div>
+                </div>
+                <div class="card">
+                    <div class="img_box"></div>
+                    <div class="text_box"></div>
                 </div>
             </div>
         </div>
