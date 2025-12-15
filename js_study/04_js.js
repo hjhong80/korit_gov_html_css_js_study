@@ -51,4 +51,29 @@ const students = [
 ];
 console.log(students);
 
-console.log(students.find((student) => student.name === "박윤호" && student.age === 6));
+console.log(
+    students.find((student) => student.name === "박윤호" && student.age === 6)
+);
+
+// includes (=contains)
+console.log(names.includes("배찬익"));
+console.log(names.includes("빠니찬익"));
+
+const numbers = [1, 2, 3, 4, 5];
+
+// filter
+console.log(numbers.filter((n) => n % 2 === 0));
+// filter (object)
+console.log(students.filter((student) => student.age > 15));
+// map
+console.log(numbers.map((n) => n * 10));
+console.log(
+    students.map((student) => {
+        if (student.age === 18) {
+            return {
+                name: student.name,
+            };
+        }
+        return student;
+    })
+);
