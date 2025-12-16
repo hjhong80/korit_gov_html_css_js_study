@@ -13,12 +13,14 @@ inputButton.onclick = () => {
 
     idx++;
     const tb = document.querySelector(".t_body");
-    tb.innerHTML += `<tr id="${idx}">
-    <td>${idx}</td>
-    <td>${name.value}</td>
-    <td>${age.value}</td>
-    <td>${address.value}</td>
-    <td><button class="del_btn" id="${idx}">삭제</button></td></tr>
+    tb.innerHTML += `
+    <tr id="${idx}">
+        <td>${idx}</td>
+        <td>${name.value}</td>
+        <td>${age.value}</td>
+        <td>${address.value}</td>
+        <td><button class="del_btn" id="${idx}">삭제</button></td>
+    </tr>
     `;
 
     name.value = "";
