@@ -1,11 +1,11 @@
 // promise chaining
 
-function getData() {
+function getData(num) {
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
             const data = { name: "이동윤" };
             // const data = null;
-            if (data) {
+            if (num != 1) {
                 console.log("비동기 작업 성공");
                 resolve(data);
             } else {
@@ -28,7 +28,10 @@ const promise = getData();
 //     });
 
 promise
-    .then(() => getData())
-    .then(() => getData())
-    .then(() => getData())
-    .then((data) => console.log(data));
+    .then(() => getData(2))
+    .then(() => getData(2))
+    .then(() => getData(1))
+    .then((data) => console.log(data))
+    .catch((error) => {
+        console.log(error.message);
+    });
