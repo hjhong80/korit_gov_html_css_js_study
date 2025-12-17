@@ -41,24 +41,10 @@ body {
     justify-content: space-between;
 }
 
-#sub_title_box {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 #sub_title_box > div:nth-child(1) {
-    margin: 0;
-    padding: 0;
     font-size: 64px;
     font-weight: 700;
     color: #7744ff;
-    display: flex;
-    align-content: top;
-    /* justify-content: center; */
 }
 
 #sub_title_box > div:nth-child(2) {
@@ -76,38 +62,48 @@ body {
 }
 
 #input_btn_box > input {
-    border: none;
+    border: 2px solid #dbdbdb;
     border-radius: 20px;
-    padding: 20px;
     height: 79px;
     background-color: #f7f7f7;
+    padding: 20px;
     box-sizing: border-box;
     font-size: 32px;
     font-weight: 400;
+    transition: all 0.2s ease-in-out;
 }
 
 #input_btn_box > input:focus {
+    /* outline: 2px solid #7744ff; */
     outline: none;
+    border: 2px solid #7744ff;
+}
+
+#input_btn_box > input:hover {
+    /* outline: 2px solid #7744ff; */
+    box-shadow: 0px 0px 11px 1px #7744ff;
 }
 
 #input_btn_box > button {
     border: none;
-    border-radius: 20px;
-    padding: 20px;
-    height: 80px;
     background-color: #7744ff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 80px;
     font-size: 32px;
     font-weight: 700;
     color: #ffffff;
     cursor: pointer;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
-    transition: all 0.05s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 #input_btn_box > button:hover {
     background-color: #5f36cc;
+    box-shadow: 0px 0px 11px 1px #7744ff;
 }
 
 #todo_list_container {
@@ -141,10 +137,11 @@ body {
 
 .todo_box {
     width: 900px;
-    height: 279px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .todo_date {
@@ -166,7 +163,57 @@ body {
     gap: 32px;
 }
 
-/* ========================== 체크박스 커스텀 CSS 시작 ======================== */
+.todo > input {
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #e5dcff;
+    border-radius: 100px;
+}
+
+.todo_btn_box {
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo_btn_box > button {
+    width: 100px;
+    height: 53px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.todo_btn_box > button:nth-child(1) {
+    background-color: #e5dcff;
+    color: #7744ff;
+}
+
+.todo_btn_box > button:nth-child(2) {
+    background-color: #7744ff;
+    color: #ffffff;
+}
+
+.todo_btn_box > button:nth-child(1):hover {
+    background-color: #ad8fff;
+    color: #472999;
+}
+
+.todo_btn_box > button:nth-child(2):hover {
+    background-color: #5f36cc;
+}
+
+/* ========================== 체크박스 커스텀 CSS ======================== */
 .control-container {
     display: flex;
     position: relative;
@@ -175,6 +222,7 @@ body {
     margin-top: 0.7em;
 }
 .screen-reader {
+    /* 스크린 리더를 고려해서 체크박스를 화면에서 숨김 */
     position: absolute;
     width: 1px;
     height: 1px;
@@ -225,50 +273,7 @@ label {
     border-color: #7744ff;
 }
 
-/* ========================== 체크박스 커스텀 CSS 끝 ======================== */
-
-.todo_btn_box {
-    width: 220px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.todo_btn_box > button {
-    width: 100px;
-    height: 53px;
-    padding: 12px 12px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    cursor: pointer;
-    border: none;
-    font-size: 24px;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-}
-
-.todo_btn_box > button:nth-child(1) {
-    background-color: #e5dcff;
-    color: #7744ff;
-}
-
-.todo_btn_box > button:nth-child(1):hover {
-    background-color: #c9b6ff;
-    color: #472999;
-}
-
-.todo_btn_box > button:nth-child(2) {
-    background-color: #7744ff;
-    color: #ffffff;
-}
-
-.todo_btn_box > button:nth-child(2):hover {
-    background-color: #5f36cc;
-}
-
+/* ================ 모달 CSS ==================== */
 #modal_container {
     width: 100vw;
     height: 100vh;
@@ -277,7 +282,6 @@ label {
     top: 0;
     left: 0;
     display: none;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
@@ -286,7 +290,7 @@ label {
     width: 600px;
     background-color: #ffffff;
     border-radius: 20px;
-    padding: 20px;
+    padding: 40px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -294,18 +298,13 @@ label {
     gap: 20px;
 }
 
-#modal_input_box {
-    width: 560px;
-}
-
 #modal_input_box > input {
     width: 100%;
-    background-color: #ad8fff;
     border: none;
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: 12px;
     height: 79px;
     background-color: #f7f7f7;
+    padding: 20px;
     box-sizing: border-box;
     font-size: 32px;
     font-weight: 400;
@@ -324,7 +323,7 @@ label {
 #modal_btn_box > button {
     width: 100px;
     height: 53px;
-    padding: 12px 12px;
+    padding: 12px 20px;
     box-sizing: border-box;
     border-radius: 12px;
     cursor: pointer;
@@ -334,7 +333,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 #modal_btn_box > button:nth-child(1) {
@@ -342,14 +341,14 @@ label {
     color: #7744ff;
 }
 
-#modal_btn_box > button:nth-child(1):hover {
-    background-color: #c9b6ff;
-    color: #472999;
-}
-
 #modal_btn_box > button:nth-child(2) {
     background-color: #7744ff;
     color: #ffffff;
+}
+
+#modal_btn_box > button:nth-child(1):hover {
+    background-color: #ad8fff;
+    color: #472999;
 }
 
 #modal_btn_box > button:nth-child(2):hover {
