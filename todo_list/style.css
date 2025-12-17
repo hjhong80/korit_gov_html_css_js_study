@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #efefef;
+    display: flex;
+}
+
+#todo_register_container {
+    width: 900px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    width: 700px;
+    height: 38px;
+    font-weight: 700;
+    font-size: 32px;
+    color: #717171;
+}
+
+#todo_register_box {
+    width: 700px;
+    height: 397px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sub_title_box {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sub_title_box > div:nth-child(1) {
+    margin: 0;
+    padding: 0;
+    font-size: 64px;
+    font-weight: 700;
+    color: #7744ff;
+    display: flex;
+    align-content: top;
+    /* justify-content: center; */
+}
+
+#sub_title_box > div:nth-child(2) {
+    font-size: 32px;
+    font-weight: 500;
+    color: #7c7c7c;
+}
+
+#input_btn_box {
+    width: 700px;
+    height: 191px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#input_btn_box > input {
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    height: 79px;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+#input_btn_box > input:focus {
+    outline: none;
+}
+
+#input_btn_box > button {
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    height: 80px;
+    background-color: #7744ff;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: all 0.05s ease-in-out;
+}
+
+#input_btn_box > button:hover {
+    background-color: #5f36cc;
+}
+
+#todo_list_container {
+    width: 1020px;
+    height: 100%;
+    padding: 100px 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+#todo_list_box {
+    width: 900px;
+    height: 782px;
+    overflow: auto;
+}
+
+#todo_list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#todo_list > li {
+    list-style: none;
+}
+
+.todo_box {
+    width: 900px;
+    height: 279px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.todo_date {
+    font-size: 24px;
+    font-weight: 500;
+    color: #7c7c7c;
+}
+
+.todo {
+    width: 900px;
+    height: 93px;
+    border-radius: 20px;
+    padding: 20px 32px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+/* ========================== 체크박스 커스텀 CSS 시작 ======================== */
+.control-container {
+    display: flex;
+    position: relative;
+}
+.control-container + .control-container {
+    margin-top: 0.7em;
+}
+.screen-reader {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    margin: -1px;
+    clip-path: inset(50%);
+}
+.label-box {
+    position: relative;
+}
+.check-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f4f1ff;
+    border: 2px solid #e5dcff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.check-icon::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 30%;
+    height: 55%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-70%) rotateZ(40deg);
+    border-right: 2px solid #e5dcff;
+    border-bottom: 2px solid #e5dcff;
+}
+label {
+    padding-left: 2.2em;
+    position: relative;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 400;
+    color: #363636;
+}
+[type="checkbox"]:checked + .label-box .check-icon {
+    border-color: #7744ff;
+}
+[type="checkbox"]:checked + .label-box .check-icon::before {
+    border-color: #7744ff;
+}
+
+/* ========================== 체크박스 커스텀 CSS 끝 ======================== */
+
+.todo_btn_box {
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo_btn_box > button {
+    width: 100px;
+    height: 53px;
+    padding: 12px 12px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.todo_btn_box > button:nth-child(1) {
+    background-color: #e5dcff;
+    color: #7744ff;
+}
+
+.todo_btn_box > button:nth-child(1):hover {
+    background-color: #c9b6ff;
+    color: #472999;
+}
+
+.todo_btn_box > button:nth-child(2) {
+    background-color: #7744ff;
+    color: #ffffff;
+}
+
+.todo_btn_box > button:nth-child(2):hover {
+    background-color: #5f36cc;
+}
+
+#modal_container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #3636367a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+#modal_box {
+    width: 600px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#modal_input_box {
+    width: 560px;
+}
+
+#modal_input_box > input {
+    width: 100%;
+    background-color: #ad8fff;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    height: 79px;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+#modal_input_box > input:focus {
+    outline: none;
+}
+
+#modal_btn_box {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+#modal_btn_box > button {
+    width: 100px;
+    height: 53px;
+    padding: 12px 12px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+#modal_btn_box > button:nth-child(1) {
+    background-color: #e5dcff;
+    color: #7744ff;
+}
+
+#modal_btn_box > button:nth-child(1):hover {
+    background-color: #c9b6ff;
+    color: #472999;
+}
+
+#modal_btn_box > button:nth-child(2) {
+    background-color: #7744ff;
+    color: #ffffff;
+}
+
+#modal_btn_box > button:nth-child(2):hover {
+    background-color: #5f36cc;
+}
